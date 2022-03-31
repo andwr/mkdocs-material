@@ -16,7 +16,9 @@ theme:
       toggle:
           icon: material/toggle-switch
           name: Switch to light mode
-
+nav:
+  - Home: index.md
+  - PlantUML: plantuml.md
 extra:
   homepage: https://developers.cardsmobile.ru
   alternate:
