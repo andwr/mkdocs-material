@@ -5,14 +5,14 @@ theme:
   logo: assets/koshelek.svg
   palette:
     - scheme: default
-      primary: green
+      primary: plum
       accent: indigo
       toggle:
         icon: material/toggle-switch-off-outline 
         name: Switch to dark mode
     - scheme: slate
-      primary: black
-      accent: lime
+      primary: red
+      accent: pink
       toggle:
           icon: material/toggle-switch
           name: Switch to light mode
