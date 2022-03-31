@@ -4,14 +4,7 @@ theme:
   language: ru
   logo: assets/koshelek.svg
   palette: 
-    - scheme: plum
-      toggle:
-        icon: material/toggle-switch-off-outline 
-        name: Switch to dark mode
-    - scheme: slate 
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    scheme: plum
 extra:
   homepage: https://developers.cardsmobile.ru
   alternate:
