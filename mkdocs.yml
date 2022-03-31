@@ -1,5 +1,6 @@
 site_name: Developers
 theme:
+  name: material
   language: ru
   logo: assets/koshelek.svg
 extra:
