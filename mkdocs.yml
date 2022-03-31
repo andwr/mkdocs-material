@@ -1,6 +1,13 @@
 site_name: Developers
 theme:
-  name: material
+  language: ru
   logo: assets/koshelek.svg
 extra:
   homepage: https://developers.cardsmobile.ru
+  alternate:
+    - name: English
+    - link: /en/
+    - lang: en
+    - name: Русский
+    - link: /ru/
+    - lang: ru
