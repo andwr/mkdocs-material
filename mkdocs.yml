@@ -17,10 +17,10 @@ theme:
           icon: material/toggle-switch
           name: Switch to light mode
 nav:
-  - Home: index.md
+  - Welcome: index.md
   - PlantUML: plantuml.md
 extra:
-  homepage: https://developers.cardsmobile.ru
+  homepage: https://andwr.github.io/mkdocs-material/
   alternate:
     - name: English
     - link: /en/
