@@ -1,1 +1,1 @@
-[OAD(./docs/openapi.json)]
+<!-- [OAD(./docs/Push-Callback-API-RU.yaml)] -->
