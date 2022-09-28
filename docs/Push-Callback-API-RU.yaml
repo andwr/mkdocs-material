@@ -1,6 +1,4 @@
-openapi: 3.1.0
-x-stoplight:
-  id: 2n9m5171tgtto
+openapi: 3.0.0
 info:
   title: Push Callback API
   version: '1.0'
