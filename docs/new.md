@@ -1,1 +1,1 @@
-[OAD(Push-Callback-API-RU.yaml)]
+[OAD(.docs/Push-Callback-API-RU.yaml)]
