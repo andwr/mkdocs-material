@@ -1,10 +1,8 @@
 site_name: Material for MkDocs
 theme: material
-
   # Necessary for search to work properly
   include_search_page: false
   search_index_only: true
-
   # Default values, taken from mkdocs_theme.yml
   language: en
   font:
