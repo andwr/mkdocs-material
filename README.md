@@ -2,4 +2,4 @@
 
 #### MkDocs Material
 
-[OAD(./docs/Push-Callback-API-RU.yaml)]
+[OAD(Push-Callback-API-RU.yaml)]
