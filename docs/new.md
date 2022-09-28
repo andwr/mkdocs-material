@@ -1,1 +1,1 @@
-new
+[OAD(Push-Callback-API-RU.yaml)]
