@@ -1,4 +1,7 @@
 site_name: Material for MkDocs
+repo_url: https://github.com/andwr/mkdocs-material
+repo_name: andwr/mkdocs-material
+edit_uri: edit/main/docs
 theme:
   name: material
   language: ru
