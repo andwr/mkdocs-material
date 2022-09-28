@@ -1,6 +1,7 @@
+site_name: Material for MkDocs
 theme:
   name: null
-  custom_dir: mkdocs-material/docs
+  custom_dir: docs
 
   # Necessary for search to work properly
   include_search_page: false
