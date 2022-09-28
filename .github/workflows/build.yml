@@ -14,4 +14,5 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: pip install neoteroi-mkdocs
+      - run: pip install essentials-openapi
       - run: mkdocs gh-deploy --force
