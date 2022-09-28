@@ -4,9 +4,6 @@ repo_name: andwr/mkdocs-material
 edit_uri: edit/main/docs
 theme:
   name: material
-  language: ru
-  features:
-    - navigation.sections
   palette:
     - scheme: default
       primary: indigo
