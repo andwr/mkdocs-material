@@ -1,2 +1,4 @@
 site_name: Material for MkDocs
 theme: material
+nav:
+  - OpenAPI new.md
