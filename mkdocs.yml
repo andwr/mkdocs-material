@@ -1,4 +1,8 @@
 site_name: Material for MkDocs
-theme: material
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.sections
 nav:
   - OpenAPI new.md
