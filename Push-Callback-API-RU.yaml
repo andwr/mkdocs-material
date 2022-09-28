@@ -1,0 +1,114 @@
+openapi: 3.1.0
+x-stoplight:
+  id: 2n9m5171tgtto
+info:
+  title: Push Callback API
+  version: '1.0'
+  description: |-
+    Информирование о доставке пуш-сообщений пользователям Кошелька
+    ___
+    Руководство предназначено для компаний-партнеров ООО «Бесконтакт» (Cardsmobile), желающих организовать выпуск карт лояльности своих клиентов в мобильном приложении «Кошелёк», используя платформу Cardsmobile. 
+
+    Cardsmobile Push Callback API предоставляет Cardsmobile интерфейс для получения информации о доставке пуш-сообщений на устройства клиентов.
+
+    #### Подключение к API
+
+    Провайдером Push Callback API выступает узел партнера. 
+
+    Партнеру необходимо предоставить «обратный» URL-адрес, который будет использоваться хостом Cardsmobile для информирования о доставке и прочтении отправляемых сообщений.
+
+    #### Авторизация
+
+    Взаимодействие осущеставляется по протоколу HTTPS. Для авторизации запросов необходимо использовать HTTP Basic Authentication ([RFC 7617](https://tools.ietf.org/html/rfc7617)). Данные для авторизации запросов передаются в заголовке `Authorization`.
+
+    #### Кодировки
+
+    Как в запросах, так и в ответах API используется кодировка UTF-8.
+
+    #### Коды HTTP
+
+    В случае успешного выполнения запроса, со стороны узла партнера должен быть возвращен тип данных, описанный в документации запроса, и HTTP-код 200.
+servers:
+  - url: 'https://your-api-host'
+    description: 'URL узла партнера, предоставляющего доступ к Push Callback API'
+paths:
+  '/{<your-push-callback-api-endpoint>}':
+    parameters:
+      - schema:
+          type: string
+        name: <your-push-callback-api-endpoint>
+        in: path
+        required: true
+        description: URL для подключения к API со стороны Cardsmobile
+    post:
+      summary: Информирование об изменении статуса доставки
+      operationId: post-your-callback-endpoint
+      responses:
+        '200':
+          description: Запрос обработан. Тело ответа — пустое.
+      description: 'Если при создании сообщения значение параметра `deliveryStatusNotifications` равно `true`, то при изменении статуса доставки сообщения узел Cardsmobile совершит API-вызов на URL, предоставленный партнером в рамках проекта интеграции.'
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              x-examples:
+                example-1:
+                  msisdn: 79051234567
+                  messageId: c506b550-a309-11e9-a2a3-2a2ae2dbcce4
+                  state: DELIVERED
+                  time: '2019-11-29T17:11:42.739Z'
+                  utm:
+                    utmSource: cardsmobile
+                    utmMiddle: cpc
+                    utmCampaign: campaign_name
+              properties:
+                msisdn:
+                  type: integer
+                  description: Номер телефона получателя сообщения без `+`
+                messageId:
+                  type: string
+                  description: Идентификатор сессии отправки
+                state:
+                  type: string
+                  enum:
+                    - DELIVERED
+                    - OPENED
+                  description: |-
+                    Статус доставки сообщения:
+
+                    `DELIVERED` — сообщение доставлено.<br>
+                    `OPENED` — сообщение прочитано.
+                time:
+                  type: string
+                  description: 'Время обновления статуса (`yyyy.mm.ddThh:mm:ssZ`)'
+                utm:
+                  type: object
+                  properties:
+                    utmSource:
+                      type: string
+                      description: Источник рассылки
+                    utmMiddle:
+                      type: string
+                      description: Тип трафика
+                    utmCampaign:
+                      type: string
+                      description: Название кампании
+              required:
+                - msisdn
+                - messageId
+                - state
+            examples:
+              post-your-push-callback-api-endpoint:
+                value:
+                  msisdn: 79051234567
+                  messageId: c506b550-a309-11e9-a2a3-2a2ae2dbcce4
+                  state: DELIVERED
+                  time: '2019-11-29T17:11:42.739Z'
+                  utm:
+                    utmSource: cardsmobile
+                    utmMiddle: cpc
+                    utmCampaign: campaign_name
+        description: ''
+components:
+  schemas: {}
