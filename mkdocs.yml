@@ -5,4 +5,4 @@ theme:
   features:
     - navigation.sections
 nav:
-  - OpenAPI new.md
+  - OpenAPI: new.md
